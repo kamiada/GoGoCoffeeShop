@@ -21,8 +21,15 @@ func main() {
 	for {
 		userInput, _ := reader.ReadString('\n')
 		userInput = strings.Replace(userInput, "\n", "", -1)
-		if strings.Compare("Latte", userInput) == 0 {
+		switch userInput {
+		case "Latte":
 			fmt.Println("Here you go! That's going to be 1.50!")
+		case "Americano":
+			fmt.Println("Here you go! That's going to be €0.80!")
+		case "Macchiato":
+			fmt.Println("Here you go! That's going to be €1.30")
+		default:
+			fmt.Println("I don't understand your order")
 		}
 	}
 }
