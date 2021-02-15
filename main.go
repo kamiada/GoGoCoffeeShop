@@ -9,6 +9,17 @@ import (
 	"strings"
 )
 
+func barista(coffee string) string {
+	switch coffee {
+	case "Latte":
+
+	case "Americano":
+
+	case "Macchiato":
+
+	}
+}
+
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 	menu, err := ioutil.ReadFile("./menu.txt")
@@ -24,10 +35,13 @@ func main() {
 		switch userInput {
 		case "Latte":
 			fmt.Println("Here you go! That's going to be 1.50!")
+			os.Exit(0)
 		case "Americano":
 			fmt.Println("Here you go! That's going to be €0.80!")
+			os.Exit(0)
 		case "Macchiato":
 			fmt.Println("Here you go! That's going to be €1.30")
+			os.Exit(0)
 		default:
 			fmt.Println("I don't understand your order")
 		}
