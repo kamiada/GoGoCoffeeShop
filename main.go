@@ -7,12 +7,13 @@ import (
 	"log"
 	"os"
 	"strings"
+	"time"
 )
 
 func barista(coffee string) string {
 	switch coffee {
 	case "Latte":
-
+		time.Sleep(2 * time.Second)
 	case "Americano":
 
 	case "Macchiato":
@@ -34,12 +35,15 @@ func main() {
 		userInput = strings.Replace(userInput, "\n", "", -1)
 		switch userInput {
 		case "Latte":
+			barista("Latte")
 			fmt.Println("Here you go! That's going to be 1.50!")
 			os.Exit(0)
 		case "Americano":
+			barista("Americano")
 			fmt.Println("Here you go! That's going to be €0.80!")
 			os.Exit(0)
 		case "Macchiato":
+			barista("Macchiato")
 			fmt.Println("Here you go! That's going to be €1.30")
 			os.Exit(0)
 		default:
