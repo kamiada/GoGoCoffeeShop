@@ -13,12 +13,15 @@ import (
 func barista(coffee string) string {
 	switch coffee {
 	case "Latte":
+		fmt.Println("warming up milk...")
 		time.Sleep(2 * time.Second)
+		fmt.Println("...serving coffee...")
 	case "Americano":
-
+		time.Sleep(2 * time.Second)
 	case "Macchiato":
-
+		time.Sleep(2 * time.Second)
 	}
+
 }
 
 func main() {
