@@ -11,17 +11,22 @@ import (
 )
 
 func barista(coffee string) string {
-	switch coffee {
-	case "Latte":
+	var a = "Done!"
+	if coffee == "Latte" {
 		fmt.Println("warming up milk...")
 		time.Sleep(2 * time.Second)
 		fmt.Println("...serving coffee...")
-	case "Americano":
-		time.Sleep(2 * time.Second)
-	case "Macchiato":
-		time.Sleep(2 * time.Second)
-	}
 
+	}
+	if coffee == "Americano" {
+		time.Sleep(2 * time.Second)
+
+	}
+	if coffee == "Macchiato" {
+		time.Sleep(2 * time.Second)
+
+	}
+	return a
 }
 
 func main() {
